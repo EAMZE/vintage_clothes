@@ -1,20 +1,23 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
-import Admin from './pages/Admin';
-import Orders from './pages/Orders';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 import initialProducts from './data/products';
 
 function App() {
   const [products, setProducts] = useState(initialProducts);
   const [cartItems, setCartItems] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(
+    localStorage.getItem('isAdminLoggedIn') === 'true'
+  );
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
@@ -25,16 +28,20 @@ function App() {
     setCartItems(updatedCart);
   };
 
-  const addProduct = (newProduct) => {
-    setProducts([...products, newProduct]);
-  };
-
   const addOrder = (newOrder) => {
     setOrders([...orders, newOrder]);
   };
 
   const clearCart = () => {
     setCartItems([]);
+  };
+
+  const handleAdminLogin = () => {
+    setIsAdminLoggedIn(true);
+  };
+
+  const handleAdminLogout = () => {
+    setIsAdminLoggedIn(false);
   };
 
   return (
@@ -49,8 +56,25 @@ function App() {
           path="/products"
           element={<Products products={products} addToCart={addToCart} />}
         />
-        <Route path="/admin" element={<Admin addProduct={addProduct} />} />
-        <Route path="/orders" element={<Orders orders={orders} />} />
+        <Route
+          path="/admin-login"
+          element={<AdminLogin onAdminLogin={handleAdminLogin} />}
+        />
+        <Route
+          path="/admin-dashboard"
+          element={
+            isAdminLoggedIn ? (
+              <AdminDashboard
+                onAdminLogout={handleAdminLogout}
+                products={products}
+                orders={orders}
+                cartItems={cartItems}
+              />
+            ) : (
+              <Navigate to="/admin-login" />
+            )
+          }
+        />
         <Route
           path="/cart"
           element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} />}

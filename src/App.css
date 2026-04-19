@@ -251,3 +251,149 @@ p {
     gap: 18px;
   }
 }
+
+.admin-login-container {
+  max-width: 450px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-login-form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.admin-login-form button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-login-form button:hover {
+  background-color: #c89b3c;
+  color: black;
+}
+.admin-dashboard {
+  max-width: 700px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.logout-btn {
+  display: block;
+  margin: 25px auto 0;
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.stat-card {
+  background-color: #f7f3ee;
+  width: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.dashboard-actions button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dashboard-actions button:hover {
+  background-color: #c89b3c;
+  color: black;
+}
+.dashboard-section {
+  max-width: 700px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.dashboard-section h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.dashboard-item {
+  background-color: #f7f3ee;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.dashboard-section {
+  max-width: 700px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.dashboard-section h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.dashboard-item {
+  background-color: #f7f3ee;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
