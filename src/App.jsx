@@ -12,9 +12,17 @@ import AdminDashboard from './pages/AdminDashboard';
 import initialProducts from './data/products';
 
 function App() {
-  const [products, setProducts] = useState(initialProducts);
+  const [products, setProducts] = useState(() => {
+    const savedProducts = localStorage.getItem('products');
+    return savedProducts ? JSON.parse(savedProducts) : initialProducts;
+  });
+
   const [cartItems, setCartItems] = useState([]);
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState(() => {
+    const savedOrders = localStorage.getItem('orders');
+    return savedOrders ? JSON.parse(savedOrders) : [];
+  });
+
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(
     localStorage.getItem('isAdminLoggedIn') === 'true'
   );
@@ -28,8 +36,31 @@ function App() {
     setCartItems(updatedCart);
   };
 
+  const addProduct = (newProduct) => {
+    const updatedProducts = [...products, newProduct];
+    setProducts(updatedProducts);
+    localStorage.setItem('products', JSON.stringify(updatedProducts));
+  };
+
+  const deleteProduct = (productId) => {
+    const updatedProducts = products.filter((product) => product.id !== productId);
+    setProducts(updatedProducts);
+    localStorage.setItem('products', JSON.stringify(updatedProducts));
+  };
+
   const addOrder = (newOrder) => {
-    setOrders([...orders, newOrder]);
+    const updatedOrders = [...orders, newOrder];
+    setOrders(updatedOrders);
+    localStorage.setItem('orders', JSON.stringify(updatedOrders));
+  };
+
+  const updateOrderStatus = (orderId, newStatus) => {
+    const updatedOrders = orders.map((order) =>
+      order.id === orderId ? { ...order, status: newStatus } : order
+    );
+
+    setOrders(updatedOrders);
+    localStorage.setItem('orders', JSON.stringify(updatedOrders));
   };
 
   const clearCart = () => {
@@ -38,10 +69,12 @@ function App() {
 
   const handleAdminLogin = () => {
     setIsAdminLoggedIn(true);
+    localStorage.setItem('isAdminLoggedIn', 'true');
   };
 
   const handleAdminLogout = () => {
     setIsAdminLoggedIn(false);
+    localStorage.removeItem('isAdminLoggedIn');
   };
 
   return (
@@ -69,6 +102,9 @@ function App() {
                 products={products}
                 orders={orders}
                 cartItems={cartItems}
+                addProduct={addProduct}
+                deleteProduct={deleteProduct}
+                updateOrderStatus={updateOrderStatus}
               />
             ) : (
               <Navigate to="/admin-login" />

@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="home">
       <div className="hero">
@@ -7,7 +11,9 @@ function Home() {
           Découvrez notre collection unique de vêtements vintage pour un style
           élégant, original et intemporel.
         </p>
-        <button>Explorer les produits</button>
+        <button onClick={() => navigate('/products')}>
+          Explorer les produits
+        </button>
       </div>
     </div>
   );

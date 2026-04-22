@@ -397,3 +397,123 @@ p {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
+
+.admin-product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.delete-product-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-product-btn:hover {
+  opacity: 0.9;
+}
+.dashboard-item select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.search-container input {
+  width: 320px;
+  max-width: 90%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-container select {
+  width: 320px;
+  max-width: 90%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.cart-total {
+  max-width: 700px;
+  margin: 20px auto 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.cart-total h3 {
+  margin: 0;
+  font-size: 24px;
+}
+.checkout-total {
+  background-color: #f7f3ee;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.checkout-total h3 {
+  margin: 0;
+}
+.success-box {
+  background-color: #eef8ee;
+  border: 1px solid #b7dfb9;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.success-box h3 {
+  margin-top: 0;
+  color: #1f7a1f;
+}
+
+.success-box p {
+  margin: 10px 0;
+}
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.success-actions button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.success-actions button:hover {
+  background-color: #c89b3c;
+  color: black;
+}
