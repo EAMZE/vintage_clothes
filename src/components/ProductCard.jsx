@@ -4,6 +4,7 @@ function ProductCard({ product, addToCart }) {
       <img src={product.image} alt={product.name} />
       <h3>{product.name}</h3>
       <p>{product.price}</p>
+      <p>En stock: {product.quantity}</p>
       <button onClick={() => addToCart(product)}>
         Ajouter au panier
       </button>

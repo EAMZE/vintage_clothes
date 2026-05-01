@@ -1,0 +1,120 @@
+{
+  "products": [
+    {
+      "name": "Computer",
+      "price": 10000,
+      "quantity": "522",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": true,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Phone",
+      "price": 800,
+      "quantity": 10,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": true
+    },
+    {
+      "id": "3",
+      "name": "Tablet",
+      "price": 500,
+      "quantity": 3,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": true
+    },
+    {
+      "id": "5",
+      "name": "Keyboard",
+      "price": 50,
+      "quantity": 15,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": true
+    },
+    {
+      "id": "11",
+      "name": "Chair",
+      "price": 100,
+      "quantity": 18,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": false
+    },
+    {
+      "id": "12",
+      "name": "TV",
+      "price": 700,
+      "quantity": 7,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": false
+    },
+    {
+      "id": "13",
+      "name": "Speaker",
+      "price": 80,
+      "quantity": 14,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": false
+    },
+    {
+      "id": "14",
+      "name": "External Hard Drive",
+      "price": 120,
+      "quantity": 11,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": false
+    },
+    {
+      "id": "15",
+      "name": "Smartphone",
+      "price": 900,
+      "quantity": 10,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": false
+    },
+    {
+      "id": "16",
+      "name": "Pillow",
+      "price": 900,
+      "quantity": 10,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+      "checked": false
+    },
+    {
+      "id": "F0kQhcr-4Bo",
+      "name": "Cup",
+      "price": 15,
+      "quantity": 100,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "fq2jWGKC228",
+      "name": "Cup",
+      "price": 15,
+      "quantity": 100,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Berrad",
+      "price": 15,
+      "quantity": 100,
+      "image": "https://live.staticflickr.com/7102/7153551343_871066df7d_b.jpg",
+      "id": "kXigcQmWIKo"
+    },
+    {
+      "name": "Berrad V1",
+      "price": 15,
+      "quantity": 100,
+      "image": "https://live.staticflickr.com/7102/7153551343_871066df7d_b.jpg",
+      "id": "9RpUFrXFZFU"
+    },
+    {
+      "name": "Berrad V1",
+      "price": 15,
+      "quantity": 100,
+      "image": "https://live.staticflickr.com/7102/7153551343_871066df7d_b.jpg",
+      "id": "d7m7X3NDKj4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -9,7 +9,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
-import initialProducts from './data/products';
+import initialProducts from './service/products';
 
 function App() {
   const [products, setProducts] = useState(() => {
